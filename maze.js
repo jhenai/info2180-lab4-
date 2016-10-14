@@ -16,6 +16,15 @@ window.onload= function(){
              alert("you win");}
         
     });
+    
+    document.getElementById("start").addEventListener("click", function(){
+          for (var i = 0; i < walls.length; i++) {
+              walls[i].setAttribute("class","boundary");
+          }
+        
+    });
+
+    
 
 
 function overBoundary() {
