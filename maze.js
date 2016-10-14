@@ -20,28 +20,18 @@ window.onload= function(){
     document.getElementById("start").addEventListener("click", function(){
           for (var i = 0; i < walls.length; i++) {
               walls[i].setAttribute("class","boundary");
-          }
-        
-    });
-
+          }});
     
-
-
 function overBoundary() {
-   youlose= true;
-   alert("you lose");
+    youlose= true;
     var boundaries = document.querySelectorAll(".boundary");
     for (var i = 0; i < boundaries.length; i++) {
         boundaries[i].setAttribute("class","boundary youlose");
     }
-    
+       alert("you lose");
+
 }
     
-function win(){
-    if (youlose == false){
-    alert("you win");
-        
-    }
-}   
+   
 
 }
