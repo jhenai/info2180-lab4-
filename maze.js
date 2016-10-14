@@ -13,13 +13,14 @@ window.onload= function(){
         
     document.getElementById("end").addEventListener("mouseover", function(){
              if (youlose== false){
-             alert("you win");}
+             document.getElementById("status").innerHTML = "You Win!";;}
         
     });
     
     document.getElementById("start").addEventListener("click", function(){
           for (var i = 0; i < walls.length; i++) {
               walls[i].setAttribute("class","boundary");
+              youlose= false;
           }});
     
 function overBoundary() {
@@ -28,7 +29,7 @@ function overBoundary() {
     for (var i = 0; i < boundaries.length; i++) {
         boundaries[i].setAttribute("class","boundary youlose");
     }
-       alert("you lose");
+      document.getElementById("status").innerHTML = "You Lose!";
 
 }
     
